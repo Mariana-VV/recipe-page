@@ -1,0 +1,108 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+#root {
+  width: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "YoungSerifRegular";
+  src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: "OufitSemiBold";
+  src: url("../assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "OufitRegular";
+  src: url("../assets/fonts/outfit/static/Outfit-Regular.ttf");
+}
+
+@font-face {
+  font-family: "OufitBold";
+  src: url("../assets/fonts/outfit/static/Outfit-Bold.ttf");
+}
+
+body {
+  @include textPreset4Reg;
+  color: $stone600;
+  padding-block: 40px;
+}
+
+h2 {
+  @include textPreset2;
+  color: $brown800;
+  margin-bottom: 24px;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+a,
+Link {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 736px;
+  @include onTablet {
+    max-width: 616px;
+  }
+  @include onMobile {
+    max-width: 311px;
+  }
+}
+
+hr {
+  border: 1px solid $stone150;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+}

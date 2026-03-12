@@ -1,0 +1,44 @@
+@mixin onTablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textPreset1 {
+  font-size: 40px;
+  font-family: "YoungSerifRegular";
+  line-height: 100%;
+}
+
+@mixin textPreset2 {
+  font-size: 28px;
+  font-family: "YoungSerifRegular";
+}
+
+@mixin textPreset3 {
+  font-size: 20px;
+  font-family: "OufitSemiBold";
+}
+
+@mixin textPreset4Reg {
+  font-size: 16px;
+  font-family: "OufitRegular";
+  line-height: 150%;
+}
+
+@mixin textPreset4Bold {
+  font-size: 16px;
+  font-family: "OufitBold";
+}

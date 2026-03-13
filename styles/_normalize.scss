@@ -45,6 +45,7 @@ body {
   @include textPreset4Reg;
   color: $stone600;
   padding-block: 40px;
+  background: $stone100;
 }
 
 h2 {
@@ -102,7 +103,8 @@ hr {
   border: 1px solid $stone150;
 }
 
-footer {
-  margin-top: 50px;
-  text-align: center;
+.layout {
+  background: $white;
+  padding: 40px;
+  border-radius: 24px;
 }

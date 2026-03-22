@@ -25,8 +25,7 @@ ol {
 }
 
 html {
-  -moz-text-size-adjust: none;
-       text-size-adjust: none;
+  text-size-adjust: none;
   -webkit-text-size-adjust: none;
 }
 
@@ -41,8 +40,7 @@ body {
 }
 
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 img,
@@ -266,4 +264,6 @@ td {
   font-size: 16px;
   font-family: "OufitBold";
   text-align: left;
-}/*# sourceMappingURL=global.css.map */
+}
+
+/*# sourceMappingURL=global.css.map */

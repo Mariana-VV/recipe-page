@@ -1,38 +1,41 @@
+@use "../styles/mixins" as *;
+@use "../styles/variables" as *;
+
 @font-face {
   font-family: "YoungSerifRegular";
   src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf");
 }
+
 @font-face {
   font-family: "OufitSemiBold";
   src: url("../assets/fonts/outfit/static/Outfit-SemiBold.ttf");
 }
+
 @font-face {
   font-family: "OufitRegular";
   src: url("../assets/fonts/outfit/static/Outfit-Regular.ttf");
 }
+
 @font-face {
   font-family: "OufitBold";
   src: url("../assets/fonts/outfit/static/Outfit-Bold.ttf");
 }
+
 body {
-  font-size: 16px;
-  font-family: "OufitRegular";
-  line-height: 150%;
-  color: #5f564d;
+  @include textPreset4Reg;
+  color: $stone600;
   padding-block: 40px;
-  background: #f3e5d7;
+  background: $stone100;
   font-weight: 400;
-}
-@media (max-width: 375px) {
-  body {
-    background-color: #ffffff;
+
+  @include onMobile {
+    background-color: $white;
   }
 }
 
 h2 {
-  font-size: 28px;
-  font-family: "YoungSerifRegular";
-  color: #854632;
+  @include textPreset2;
+  color: $brown800;
   margin-bottom: 24px;
 }
 
@@ -54,9 +57,10 @@ input {
 }
 
 li::marker {
-  color: #7a284e;
+  color: $rose800;
 }
 
+// important
 li {
   padding-left: 16px;
 }
@@ -69,27 +73,38 @@ ol {
 }
 
 .container {
-  background: #ffffff;
+  background: $white;
   margin: 0 auto;
   max-width: 46rem;
   padding: 40px;
   border-radius: 24px;
-}
-@media (max-width: 768px) {
-  .container {
+
+  & img {
+    height: 300px;
+    border-radius: 12px;
+  }
+
+  @include onTablet {
     max-width: 38.5rem;
   }
-}
-@media (max-width: 375px) {
-  .container {
+  @include onMobile {
     max-width: 19.4rem;
+
+    & img {
+      height: 300px;
+
+      border-radius: 12px;
+
+      @include onMobile {
+        height: 171px;
+      }
+    }
   }
 }
-
 hr {
-  border: 1px solid #e3ddd7;
+  border: 1px solid $stone150;
 }
 
 .container > * + * {
   margin-top: 1.5em;
-}/*# sourceMappingURL=main.css.map */
+}

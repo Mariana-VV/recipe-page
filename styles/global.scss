@@ -1,5 +1,6 @@
+@forward "./reset.scss";
+@forward "./main.scss";
 @forward "./mixins";
-@forward "./normalize";
-@forward "./sections";
 @forward "./typografy";
 @forward "./variables";
+@forward "./sections";

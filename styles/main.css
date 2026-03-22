@@ -1,65 +1,39 @@
-@use "../styles/variables" as *;
-@use "../styles/mixins" as *;
-
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
-#root {
-  width: 100%;
-}
-
-html {
-  font-size: 16px;
-}
-
 @font-face {
   font-family: "YoungSerifRegular";
   src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf");
 }
-
 @font-face {
   font-family: "OufitSemiBold";
   src: url("../assets/fonts/outfit/static/Outfit-SemiBold.ttf");
 }
-
 @font-face {
   font-family: "OufitRegular";
   src: url("../assets/fonts/outfit/static/Outfit-Regular.ttf");
 }
-
 @font-face {
   font-family: "OufitBold";
   src: url("../assets/fonts/outfit/static/Outfit-Bold.ttf");
 }
-
 body {
-  @include textPreset4Reg;
-  color: $stone600;
+  font-size: 16px;
+  font-family: "OufitRegular";
+  line-height: 150%;
+  color: #5f564d;
   padding-block: 40px;
-  background: $stone100;
+  background: #f3e5d7;
+  font-weight: 400;
+}
+@media (max-width: 375px) {
+  body {
+    background-color: #ffffff;
+  }
 }
 
 h2 {
-  @include textPreset2;
-  color: $brown800;
+  font-size: 28px;
+  font-family: "YoungSerifRegular";
+  color: #854632;
   margin-bottom: 24px;
-}
-
-img,
-picture,
-svg,
-video {
-  display: block;
-  max-width: 100%;
 }
 
 button {
@@ -79,32 +53,43 @@ input {
   outline: none;
 }
 
-section {
-  margin-bottom: 32px;
+li::marker {
+  color: #7a284e;
+}
+
+li {
+  padding-left: 16px;
 }
 
 ul,
 ol {
-  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  list-style-position: outside;
 }
 
 .container {
+  background: #ffffff;
   margin: 0 auto;
-  max-width: 736px;
-  @include onTablet {
-    max-width: 616px;
+  max-width: 46rem;
+  padding: 40px;
+  border-radius: 24px;
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 38.5rem;
   }
-  @include onMobile {
-    max-width: 311px;
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 19.4rem;
   }
 }
 
 hr {
-  border: 1px solid $stone150;
+  border: 1px solid #e3ddd7;
 }
 
-.layout {
-  background: $white;
-  padding: 40px;
-  border-radius: 24px;
-}
+.container > * + * {
+  margin-top: 1.5em;
+}/*# sourceMappingURL=main.css.map */
